@@ -1,0 +1,1 @@
+sensors coretemp-isa-0000 | awk '/Physical/ { print $4 }'

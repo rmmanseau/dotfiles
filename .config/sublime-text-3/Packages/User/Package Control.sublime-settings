@@ -1,0 +1,23 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ARM Assembly",
+		"BracketGuard",
+		"BracketHighlighter",
+		"ColorPicker",
+		"DoxyDoc",
+		"Emmet",
+		"KeyboardSpellCheck",
+		"Package Control",
+		"PackageResourceViewer",
+		"ReactJS",
+		"Scheme",
+		"SideBarEnhancements",
+		"SublimeREPL",
+		"x86 and x86_64 Assembly"
+	]
+}

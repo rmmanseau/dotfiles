@@ -1,0 +1,14 @@
+[
+    {
+        "keys": ["shift+ctrl+l"],
+        "command": "repl_open",
+        "args": {
+            "type": "subprocess",
+            "encoding": "utf8",
+            "cmd": ["mit-scheme"],
+            "cwd": "$folder",
+            "external_id": "scheme",
+            "syntax": "Packages/Scheme/Scheme.tmLanguage"
+        }
+    }
+]

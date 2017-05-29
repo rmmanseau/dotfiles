@@ -1,0 +1,128 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+align=center
+color=#FFFFFF
+separator=false
+separator_block_width=5
+
+[status]
+command=ssstatus show
+interval=1
+color=#E6FAFF
+
+[separator]
+full_text=〉
+
+[disk-root]
+label=(ROOT:
+command=~/.config/i3blocks/blocklets/disk-root
+interval=60
+color=#888888
+
+[separator]
+full_text=〉
+
+[wireless]
+label= 
+command=[[ $(iwgetid -r) == "" ]] && echo "" || iwgetid -r
+color=#EFE8DA
+interval=1
+
+[download]
+command=~/.config/i3blocks/blocklets/bandwidth rx 
+min_width=0000  kB/s
+align=right
+color=#99AD6A
+interval=1 # IMPORTANT
+
+[upload]
+command=~/.config/i3blocks/blocklets/bandwidth tx 
+min_width=0000  kB/s
+align=right
+color=#CF6A4C
+interval=1 # IMPORTANT
+
+[separator]
+full_text=〉
+
+[cpu]
+label= 
+command=~/.config/i3blocks/blocklets/cpu_usage
+interval=1
+min_width=   100.00%
+
+[temp]
+label= 
+command=~/.config/i3blocks/blocklets/temp
+color=#8FBFDC
+interval=1
+
+[separator]
+full_text=〉
+
+[memory]
+label= 
+command=~/.config/i3blocks/blocklets/memory
+separator=false
+color=#8FBFDC
+interval=10
+
+[separator]
+full_text=〉
+
+[volume]
+label= 
+instance=Master
+command=~/.config/i3blocks/blocklets/volume
+interval=1
+color=#E085FF
+min_width=🔊  100%
+signal=1
+
+[separator]
+full_text=〉
+
+[battery]
+instance=0
+command=~/.config/i3blocks/blocklets/battery
+interval=1
+min_width= 100%
+
+[separator]
+full_text=〉
+
+[date]
+label= 
+command=date '+%a - %b %d, %Y  '
+interval=1
+color=#EEEEEE
+
+[time]
+label= 
+command=date '+%I:%M:%S %P'
+interval=1
+color=#EEEEEE
+
+[separator]
+full_text=〉

@@ -1,0 +1,94 @@
+TERM=rxvt-unicode-256color
+
+Xft.dpi: 96
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+URxvt*loginShell:		true
+Urxvt*scrollBar:		false
+!URxvt*fading:			30
+URxvt*background:		Black
+URxvt*foreground:		White
+URxvt*saveLines:		10000
+
+URxvt*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+
+URxvt*depth: 32
+
+!======================== i3-style themes ======================================
+!=== BLACK & WHITE =============================================================
+URxvt*background: [88]#0E090E
+
+!=== ARCH BLUE =================================================================
+!URxvt*background: [82]#000000
+
+URxvt*blurRadius: 15
+
+URxvt*dynamicColors:		on
+
+! Copy Paste
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
+
+
+! terminal colors ------------------------------------------------------------
+
+! Base 16
+!*background: #111111
+!*foreground: #babdb6
+! DarkGrey + Black
+!*color0:  #585858
+!*color8:  #181818
+! Red + DarkRed
+!*color1:  #C37A77
+!*color9:  #AB4642
+! Green + DarkGreen
+!*color2:  #BCCA95
+!*color10: #A1B56C
+! Yellow + DarkYellow
+!*color3:  #E6B386
+!*color11: #DC9656
+! Blue + DarkBlue
+!*color4:  #A0C5D3
+!*color12: #7CAFC2
+! Purple + DarkPurple
+!*color5:  #CEABC5
+!*color13: #BA8BAF
+! Cyan + DarkCyan (both not tango)
+!*color6:  #A8D2CD
+!*color14: #86C1B9
+! White + LightGrey
+!*color7:  #F8F8F8
+!*color15: #B8B8B8
+
+! Tomorrow-Night
+*background: #151515
+*foreground: #888888
+! black
+*color0: #1C1C1C
+*color8: #404040
+! red
+*color1: #B85335
+*color9: #CF6A4C
+! green
+*color2: #799D6A
+*color10: #99AD6A
+! yellow
+*color3: #FFB964
+*color11: #FAD07A
+! blue
+*color4: #667899
+*color12: #8197BF
+! magenta
+*color5: #8787AF
+*color13: #C6B6EE
+! cyan
+*color6: #668799
+*color14: #8FBFDC
+! white
+*color7: #888888
+*color15: #E8E8D3

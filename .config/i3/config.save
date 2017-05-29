@@ -1,0 +1,392 @@
+#===============================================================================
+#   Navigation
+#===============================================================================
+
+# set windows key as modifier
+set $mod Mod4
+
+# Kill Focused Window
+bindsym $mod+q kill
+
+# Change Focus (jkl; or arrows)
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move Focused Window (jkl; or arrows)
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split in Horizontal Orientation
+bindsym $mod+h split h
+
+# Split in Vertical Orientation
+bindsym $mod+v split v
+
+# Enter Fullscreen Mode for the Focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+a layout tabbed
+bindsym $mod+d layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# use mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# focus the parent container
+bindsym $mod+w focus parent
+
+# focus the child container
+bindsym $mod+e focus child
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+    # These bindings trigger as soon as you enter the resize mode
+
+    # bindings to resize selected window
+    bindsym Left        resize shrink width 10 px
+    bindsym Down        resize grow height 10 px
+    bindsym Up          resize shrink height 10 px
+    bindsym Right       resize grow width 10 px
+
+    # bindings to resize gaps on all workspaces
+    # bindsym plus  gaps inner all plus 2
+    # bindsym minus gaps inner all minus 2
+    # bindsym 0     gaps inner all set 0
+
+    # bindsym Shift+plus gaps inner all plus 8
+    # bindsym Shift+minus gaps inner all minus 8
+
+    # bindings to resize gaps on current workspace
+    # bindsym Control+plus  gaps inner current plus 2
+    # bindsym Control+minus gaps inner current minus 2
+    # bindsym Control+0     gaps inner current set 0
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+z mode "resize"
+
+#===============================================================================
+#   Workspaces
+#===============================================================================
+
+# workspace names
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9 "
+set $workspace10 "10 "
+
+# switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+bindsym $mod+Control+Right workspace next
+bindsym $mod+Control+Left  workspace prev
+
+# move focused container to workspace
+bindsym $mod+Control+Shift+1 move container to workspace $workspace1
+bindsym $mod+Control+Shift+2 move container to workspace $workspace2
+bindsym $mod+Control+Shift+3 move container to workspace $workspace3
+bindsym $mod+Control+Shift+4 move container to workspace $workspace4
+bindsym $mod+Control+Shift+5 move container to workspace $workspace5
+bindsym $mod+Control+Shift+6 move container to workspace $workspace6
+bindsym $mod+Control+Shift+7 move container to workspace $workspace7
+bindsym $mod+Control+Shift+8 move container to workspace $workspace8
+bindsym $mod+Control+Shift+9 move container to workspace $workspace9
+bindsym $mod+Control+Shift+0 move container to workspace $workspace10
+bindsym $mod+Control+Shift+Right move container to workspace next
+bindsym $mod+Control+Shift+Left  move container to workspace prev
+
+# make currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+# assigments
+assign [class="Vmplayer"] $workspace10
+assign [class="Steam"] $workspace9
+
+#===============================================================================
+#   Fonts
+#===============================================================================
+
+font -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+font pango:Terminus 13px
+
+#===============================================================================
+#   Color Themes
+#===============================================================================
+
+# Black and White
+
+bar {
+  status_command i3block
+  colors {
+    separator #EEEEEE
+    background #0F0C0F
+    statusline #EEEEEE
+    focused_workspace #BFBABF #1F1C1F #BFBABF
+    active_workspace #0F0C0F #0F0C0F #888888
+    inactive_workspace #0F0C0F #0F0C0F #888888
+    urgent_workspace #CF1515 #CF1515 #ffffff
+  }
+}
+client.focused #BFBABF #BFBABF #BFBABF #BFBABF
+client.focused_inactive #2A2A2A #2A2A2A #2A2A2A #2A2A2A
+client.unfocused #2A2A2A #2A2A2A #2A2A2A #2A2A2A
+client.urgent #CF1515 #CF1515 #EAEAEA #900000
+
+# Arch Blue
+
+# bar {
+#   status_command i3blocks
+#   colors {
+#     separator #EEEEEE
+#     background #111111
+#     statusline #EEEEEE
+#     focused_workspace #5CB8E6 #5CB8E6 #ffffff
+#     active_workspace #4C5669 #4C5669 #FFFFFF
+#     inactive_workspace #4C5669 #4C5669 #FFFFFF
+#     urgent_workspace #CF1515 #CF1515 #ffffff
+#   }
+# }
+# client.focused #5CB8E6 #5CB8E6 #FFFFFF #dddddd
+# client.focused_inactive #9CB0D8 #9CB0D8 #FFFFFF #292d2e
+# client.unfocused #9CB0D8 #9CB0D8 #FFFFFF #292d2e
+# client.urgent #CF1515 #CF1515 #EAEAEA #900000
+
+#===============================================================================
+#   Floating Window Settings
+#===============================================================================
+
+# no maximum window size
+floating_maximum_size -1 x -1
+
+# force specific windows to float
+for_window [class="Binding of Isaac: Afterbirth"] floating enable
+for_window [class="feh"] floating enable
+for_window [class="Shutter"] floating enable
+for_window [title="Steam - Update News"] floating enable
+for_window [title="Gnome-mpv"] floating enable
+for_window [class="chromium"] floating enable
+for_window [class="Mines"] floating enable
+
+#===============================================================================
+# i3 Session Keys
+#===============================================================================
+
+# reload the configuration file
+bindsym $mod+Shift+Control+r reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+#==============================================================================#
+#   Selection Menus
+#==============================================================================#
+
+#
+# power selection menu
+#
+mode "power" {
+
+    # exit mode
+    bindsym Return mode "default"; exec ssstatus clear
+    bindsym Escape mode "default"; exec ssstatus clear
+    
+    # ssstatus commands
+    bindsym $mod+Control+Up exec ssstatus up
+    bindsym $mod+Control+Down exec ssstatus down
+
+    #####
+
+    # suspend
+    bindsym 1 exec systemctl suspend; \
+        mode "default"; exec ssstatus clear
+    
+    # shutdown
+    bindsym 2 exec systemctl poweroff; \
+        mode "default"; exec ssstatus clear
+
+    # restart
+    bindsym 3 exec systemctl reboot; \
+        mode "default"; exec ssstatus clear
+}
+bindsym $mod+Escape mode "power"; \
+    exec ssstatus set "1:suspend 2:shutdown 3:restart"
+
+#
+# screenshot selection menu
+#
+mode "screenshot" {
+    
+    # ssstatus commands
+    bindsym $mod+Control+Up exec ssstatus up
+    bindsym $mod+Control+Down exec ssstatus down
+
+    # Exit: Enter or Escape
+    bindsym Return mode "default"; exec ssstatus clear
+    bindsym Escape mode "default"; exec ssstatus clear
+    
+    #####
+
+    # fullscreen
+    bindsym 1 exec imgur-screenshot -f; \
+        mode "default"; exec ssstatus clear
+
+    # selection
+    bindsym 2 exec imgur-screenshot -s; \
+        mode "default"; exec ssstatus clear
+}
+bindsym Print mode "screenshot"; \
+    exec ssstatus set "1:full-screen 2:selected-region"
+
+#
+# application selection menu
+#
+mode "application-select" {
+    # ssstatus commands
+    bindsym $mod+Control+Up exec ssstatus up
+    bindsym $mod+Control+Down exec ssstatus down
+
+    # Exit: Enter or Escape
+    bindsym Return mode "default"; exec ssstatus clear
+    bindsym Escape mode "default"; exec ssstatus clear
+
+    #####
+
+    # urxvt
+    bindsym x exec urxvt; \
+        mode "default"; exec ssstatus clear
+
+    # google chrome
+    bindsym c exec google-chrome-stable; \
+        mode "default"; exec ssstatus clear
+    
+    # cmus
+    bindsym m exec urxvt -e cmus; \
+        mode "default"; exec ssstatus clear
+    
+    # google play
+    bindsym Shift+m exec chromium --app="https://play.google.com/music/listen?gclid=CJiK3O-Qms0CFZWOfgodTdYFyg&gclsrc=ds#/artists"; \
+        mode "default"; exec ssstatus clear
+    
+    # redshift
+    bindsym r exec exec /home/ryan/.scripts/toggle_redshift.sh; \
+        mode "default"; exec ssstatus clear
+    
+    # steam
+    bindsym s exec STEAM_RUNTIME=0 steam; \
+        mode "default"; exec ssstatus clear
+    
+    # windows vm
+    bindsym w exec vmplayer ~/.vmware/vms/Windows/Windows.vmx; \
+        mode "default"; exec ssstatus clear
+    
+    # gnome-mpv
+    bindsym p exec gnome-mpv; \
+        mode "default"; exec ssstatus clear
+
+    # start dolphin
+    bindsym d exec optirun -b primus dolphin-emu; \
+        mode "default"; exec ssstatus clear
+
+    # start mame
+    bindsym a exec sdlmame -autosave; \
+        mode "default"; exec ssstatus clear
+}
+bindsym $mod+Control+Return mode "application-select"; \
+    exec ssstatus set "x:urxvt c:chrome m:cmus M:google-play r:toggle-redshift \
+    s:steam w:windows-vm p:gnome-mpv d:dolphin a:mame"
+
+#===============================================================================
+# General Hotkeys
+#===============================================================================
+
+# volume control
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 1dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 1dB- unmute
+bindsym XF86AudioMute        exec amixer -q set Master toggle
+
+# audio control
+bindsym XF86AudioPause exec cmus-remote -u
+bindsym XF86AudioNext exec cmus-remote -n
+bindsym XF86AudioPrev exec cmus-remote -r
+bindsym XF86AudioStop exec cmus-remote -s
+
+# brightness control
+bindsym XF86MonBrightnessUp   exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+# ssstatus commands
+bindsym $mod+Control+Up exec ssstatus up
+bindsym $mod+Control+Down exec ssstatus down
+
+# start dmenu
+bindsym $mod+Return exec dmenu_run -fn "Terminus Mono-10"
+
+# start urxvt
+bindsym $mod+x exec urxvt
+
+# start chrome
+bindsym $mod+c exec google-chrome-stable
+
+# toggle redshift
+bindsym $mod+r exec /home/ryan/.scripts/toggle_redshift.sh
+
+#==============================================================================#
+#   Auto Start Stuff
+#==============================================================================#
+
+exec megasync
+exec syndaemon -i 1 -t -k -d # disable trackpad while typing
+
+exec_always feh --bg-scale ~/images/ink.jpg
+exec_always compton --config ~/.config/compton.conf
+
+# smart_gaps on
+# smart_borders on
+
+# default gap between windows
+# gaps inner 2
+
+# border size for all windows
+for_window [class="^.*"] border pixel 1
