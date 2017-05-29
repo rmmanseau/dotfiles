@@ -1,0 +1,18 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Bash-completion (for pacman)
+if [ -f /etc/bash_completion ]; then
+   . /etc/bash_completion
+fi
+
+# Essential Aliases
+alias ls='ls --color=auto'
+
+# Custom Prompt
+#PS1='[\u@\h \W]\$ '
+export PS1="\[$(tput bold)\]\[$(tput setaf 7)\][\[$(tput setaf 1)\]\u\[$(tput setaf 7)\]@\h \[$(tput sgr0)\]\[$(tput setaf 6)\]\W\[$(tput bold)\]\[$(tput setaf 7)\]]> \[$(tput sgr0)\]\[$(tput setaf 7)\]$ \[$(tput sgr0)\]"
