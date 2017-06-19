@@ -379,8 +379,7 @@ bindsym $mod+r exec /home/ryan/.scripts/toggle_redshift.sh
 exec megasync
 exec nm-applet
 exec devmon
-exec syndaemon -i 1 -t -k -d # disable trackpad while typing
-
+exec /home/ryan/.scripts/synclient_settings.sh
 
 exec_always feh --bg-scale ~/images/ink.jpg
 exec_always compton --config ~/.config/compton.conf
