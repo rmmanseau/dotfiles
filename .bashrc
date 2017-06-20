@@ -22,6 +22,7 @@ alias ztar='tar -zcvf'
 alias utar='tar -zxvf'
 alias udeject='devmon --unmount'
 alias udejectall='devmon --unmount-removable'
+alias chrome='google-chrome-stable'
 
 # My Script Shortcuts
 alias windeets='. /home/ryan/.scripts/get_window_details.sh'
