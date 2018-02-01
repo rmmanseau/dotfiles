@@ -5,10 +5,22 @@
         "args": {
             "type": "subprocess",
             "encoding": "utf8",
-            "cmd": ["mit-scheme"],
+            "cmd": ["mit-scheme", "-load", "$file"],
             "cwd": "$folder",
             "external_id": "scheme",
             "syntax": "Packages/Scheme/Scheme.tmLanguage"
         }
-    }
+    },
+    { "keys": ["alt+j"], "command": "move", "args": {"by": "characters", "forward": false} },
+    { "keys": ["alt+k"], "command": "move", "args": {"by": "characters", "forward": true} },
+    { "keys": ["alt+i"], "command": "move", "args": {"by": "lines", "forward": false} },
+    { "keys": ["alt+n"], "command": "move", "args": {"by": "lines", "forward": true} },
+    { "keys": ["alt+shift+j"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
+    { "keys": ["alt+shift+k"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
+    { "keys": ["alt+shift+i"], "command": "move", "args": {"by": "lines", "forward": false, "extend": true} },
+    { "keys": ["alt+shift+n"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true} },
+    
+    { "keys": ["ctrl+."], "command": "next_view_in_stack" },
+    { "keys": ["ctrl+,"], "command": "prev_view_in_stack" },
 ]
+
