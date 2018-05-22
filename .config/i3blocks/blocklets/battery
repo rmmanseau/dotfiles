@@ -40,6 +40,8 @@ if ($acpi !~ /: (\w+), (\d+)%/) {
 	die "$acpi\n";
 }
 
+
+
 $status = $1;
 $percent = $2;
 
