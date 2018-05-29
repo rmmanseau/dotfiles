@@ -1,0 +1,33 @@
+{
+    // vscode settings
+    "workbench.colorTheme": "Flatland Monokai Improved",
+    "editor.renderLineHighlight": "gutter",
+    "editor.rulers": [
+        80
+    ],
+
+    // syntax specific settings
+    "[latex]": {
+        "editor.wordWrap": "on"
+    },
+    "[plaintext]": {
+        "editor.wordWrap": "on"
+    },
+
+    // extension settings
+    "latex-workshop.view.pdf.viewer": "tab",
+    "browserSync.config" : {
+        "browser" : ["google-chrome-stable"],
+        "codeSync" : true
+    },
+    // "python.linting.pylintArgs": ["--unsafe-load-any-extension=y"],
+
+    // Macros
+    "macros": {
+        "execPythonSelectionAndFocusTerminal": [
+            "python.execSelectionInTerminal",
+            "workbench.action.terminal.focus"
+        ],
+    },
+    "window.zoomLevel": 0
+}
