@@ -382,7 +382,7 @@ exec nm-applet
 exec devmon
 exec /home/ryan/.scripts/synclient_settings.sh
 
-exec_always feh --bg-scale ~/images/ink.jpg
+exec_always feh --bg-scale ~/.config/backgrounds/ink.jpg
 exec_always compton --config ~/.config/compton.conf
 
 # smart_gaps on
