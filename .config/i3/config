@@ -208,6 +208,7 @@ for_window [title="Gnome-mpv"] floating enable
 for_window [class="chromium"] floating enable
 for_window [class="Mines"] floating enable
 for_window [class="Matplotlib"] floating enable
+for_window [title="DebuggerTerminal"] floating enable
 
 #===============================================================================
 # i3 Session Keys

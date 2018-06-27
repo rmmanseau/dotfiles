@@ -29,4 +29,8 @@
         "command": "macros.execPythonSelectionAndFocusTerminal",
         "when": "editorFocus && editorHasSelection && editorLangId == 'python'"
     },
+    {   "key": "alt+shift+t",
+        "command": "trailing-spaces.deleteTrailingSpaces",
+        "when": "editorTextFocus"
+    },
 ]
